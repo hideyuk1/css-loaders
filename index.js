@@ -11,6 +11,13 @@ async function loadHtml(path) {
   contentDiv.innerHTML += await fetchHtmlAsText(path);
 }
 
+const loaderPaths = [
+  "loaders/three-dots/three-dots.html",
+  "loaders/bordered-square/bordered-square.html"
+];
+
 (async () => {
-  await loadHtml("loaders/three-dots/three-dots.html");
+  for (const path of loaderPaths) {
+    await loadHtml(path);
+  }
 })();

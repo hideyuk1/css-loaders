@@ -1,4 +1,4 @@
-@keyframes translateX {
+@keyframes three-dots__translateX {
   from {
     transform: translateX(-100%);
   }
@@ -7,7 +7,7 @@
   }
 }
 
-@keyframes appearDisappear {
+@keyframes three-dots__appearDisappear {
   0% {
     opacity: 0;
   }
@@ -19,20 +19,13 @@
   }
 }
 
-.app {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
-
-.loader {
+.three-dots {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.dot {
+.three-dots__dot {
   border: 1px solid black;
   background-color: black;
   height: 20px;
@@ -40,28 +33,34 @@
   border-radius: 20px;
 }
 
-.dot + .dot {
+.three-dots__dot + .three-dots__dot {
   margin-left: 10px;
 }
 
 :root {
   /* animation variables */
-  --translateX-timing-function: cubic-bezier(0, 1, 1, 0);
-  --opacity-timing-function: ease-in-out;
-  --duration: 2s;
+  --three-dots__translateX-timing-function: cubic-bezier(0, 1, 1, 0);
+  --three-dots__opacity-timing-function: ease-in-out;
+  --three-dots__duration: 2s;
 }
 
-.first {
-  animation: translateX 2s infinite 0.4s var(--translateX-timing-function),
-    appearDisappear 2s infinite 0.4s var(--opacity-timing-function);
+.three-dots__dot--first {
+  animation: three-dots__translateX var(--three-dots__duration) infinite 0.4s
+      var(--three-dots__translateX-timing-function),
+    three-dots__appearDisappear var(--three-dots__duration) infinite 0.4s
+      var(--three-dots__opacity-timing-function);
 }
 
-.second {
-  animation: translateX 2s infinite 0.2s var(--translateX-timing-function),
-    appearDisappear 2s infinite 0.2s var(--opacity-timing-function);
+.three-dots__dot--second {
+  animation: three-dots__translateX var(--three-dots__duration) infinite 0.2s
+      var(--three-dots__translateX-timing-function),
+    three-dots__appearDisappear var(--three-dots__duration) infinite 0.2s
+      var(--three-dots__opacity-timing-function);
 }
 
-.third {
-  animation: translateX 2s infinite 0s var(--translateX-timing-function),
-    appearDisappear 2s infinite 0s var(--opacity-timing-function);
+.three-dots__dot--third {
+  animation: three-dots__translateX var(--three-dots__duration) infinite 0s
+      var(--three-dots__translateX-timing-function),
+    three-dots__appearDisappear var(--three-dots__duration) infinite 0s
+      var(--three-dots__opacity-timing-function);
 }
