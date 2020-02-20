@@ -22,7 +22,6 @@
 .moving-square-line__base-square {
   height: var(--moving-square-line__static-square-side);
   width: var(--moving-square-line__static-square-side);
-  /* background-color: red; */
   position: relative;
   overflow: hidden;
 }
@@ -51,16 +50,6 @@
 .moving-square-line__inner-square {
   position: absolute;
   top: var(--moving-square-line__moving-square-offest);
-  /* top: calc(
-    var(--moving-square-line__moving-border-width)-var(
-        --moving-square-line__square-side
-      )
-  );
-  left: calc(
-    var(--moving-square-line__moving-border-width)-var(
-        --moving-square-line__square-side
-      )
-  ); */
   left: var(--moving-square-line__moving-square-offest);
   background-color: black;
   height: var(--moving-square-line__moving-square-side);
