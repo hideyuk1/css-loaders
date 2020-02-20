@@ -13,7 +13,7 @@ async function loadHtml(path) {
 
 const loaderPaths = [
   "loaders/three-dots/three-dots.html",
-  "loaders/bordered-square/bordered-square.html"
+  "loaders/moving-square-line/moving-square-line.html"
 ];
 
 (async () => {
