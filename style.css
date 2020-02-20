@@ -1,0 +1,67 @@
+@keyframes translateX {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes appearDisappear {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.app {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dot {
+  border: 1px solid black;
+  background-color: black;
+  height: 20px;
+  width: 20px;
+  border-radius: 20px;
+}
+
+.dot + .dot {
+  margin-left: 10px;
+}
+
+:root {
+  /* animation variables */
+  --translateX-timing-function: cubic-bezier(0, 1, 1, 0);
+  --opacity-timing-function: ease-in-out;
+  --duration: 2s;
+}
+
+.first {
+  animation: translateX 2s infinite 0.4s var(--translateX-timing-function),
+    appearDisappear 2s infinite 0.4s var(--opacity-timing-function);
+}
+
+.second {
+  animation: translateX 2s infinite 0.2s var(--translateX-timing-function),
+    appearDisappear 2s infinite 0.2s var(--opacity-timing-function);
+}
+
+.third {
+  animation: translateX 2s infinite 0s var(--translateX-timing-function),
+    appearDisappear 2s infinite 0s var(--opacity-timing-function);
+}
