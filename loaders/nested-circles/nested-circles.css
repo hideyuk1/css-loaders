@@ -1,0 +1,60 @@
+:root {
+  --nested-circles__diameter: 80px;
+  /* --nested-circles__inner-diameter: calc(var(--nested-circles__diameter) / 2); */
+  --nested-circles__inner-diameter: 60px;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes nested-circles__rotation {
+  0% {
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    transform: rotate(360deg);
+    opacity: 1;
+  }
+}
+
+.nested-circles__base-circle {
+  height: var(--nested-circles__diameter);
+  width: var(--nested-circles__diameter);
+  border: 10px black solid;
+  border-radius: var(--nested-circles__diameter);
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+  animation: nested-circles__rotation 1s linear infinite;
+}
+
+.nested-circles__inner-circle {
+  position: relative;
+  height: var(--nested-circles__inner-diameter);
+  width: var(--nested-circles__inner-diameter);
+  border: 10px black solid;
+  box-sizing: border-box;
+  border-radius: var(--nested-circles__inner-diameter);
+}
+/* 
+span {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform: scale(0.001);
+  transform-origin: inherit;
+}
+
+span::after {
+  content: "";
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  background: rgba(255, 128, 128, 0.75);
+  transform: scale(1000);
+} */

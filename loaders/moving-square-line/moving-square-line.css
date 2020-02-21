@@ -17,6 +17,9 @@
 }
 
 .moving-square-line {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .moving-square-line__base-square {
