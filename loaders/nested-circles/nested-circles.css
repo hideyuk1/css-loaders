@@ -21,7 +21,7 @@
   overflow: hidden;
   height: var(--nested-circles__size);
   width: var(--nested-circles__size);
-  background-color: blue;
+  background-color: var(--debug-size-color);
   justify-content: center;
   align-items: center;
 }

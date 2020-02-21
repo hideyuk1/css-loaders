@@ -36,7 +36,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: blue;
+  background-color: var(--debug-size-color);
   width: var(--three-dots__size);
   height: var(--three-dots__size);
 }

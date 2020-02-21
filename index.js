@@ -13,7 +13,12 @@ async function loadHtml(path) {
 
 const loadersRootPath = "loaders";
 
-const loaders = ["three-dots", "moving-square-line", "nested-circles"];
+const loaders = [
+  "three-dots",
+  "moving-square-line",
+  "nested-circles",
+  "circular-bars"
+];
 
 const loadersPaths = loaders.map(
   loaderName => `${loadersRootPath}/${loaderName}/${loaderName}.html`

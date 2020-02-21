@@ -1,3 +1,7 @@
+:root {
+  --debug-size-color: lightgray;
+}
+
 #app {
   display: flex;
   flex-direction: column;

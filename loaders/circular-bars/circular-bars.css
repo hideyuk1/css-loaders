@@ -1,0 +1,13 @@
+:root {
+  --circular-bars__size: 100px;
+  --circular-bars__color: black;
+}
+
+.circular-bars {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--debug-size-color);
+  height: var(--circular-bars__size);
+  width: var(--circular-bars__size);
+}
