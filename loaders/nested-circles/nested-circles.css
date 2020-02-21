@@ -1,9 +1,6 @@
 :root {
-  --nested-circles__diameter: 80px;
-  /* --nested-circles__inner-diameter: calc(var(--nested-circles__diameter) / 2); */
+  --nested-circles__size: 100px;
   --nested-circles__inner-diameter: 60px;
-  justify-content: center;
-  align-items: center;
 }
 
 @keyframes nested-circles__rotation {
@@ -22,18 +19,24 @@
 
 .nested-circles {
   overflow: hidden;
+  height: var(--nested-circles__size);
+  width: var(--nested-circles__size);
+  background-color: blue;
+  justify-content: center;
+  align-items: center;
 }
 
 .nested-circles__base-circle {
-  height: var(--nested-circles__diameter);
-  width: var(--nested-circles__diameter);
+  height: var(--nested-circles__size);
+  width: var(--nested-circles__size);
   border: 10px black solid;
-  border-radius: var(--nested-circles__diameter);
+  border-radius: var(--nested-circles__size);
   display: flex;
   justify-content: flex-start;
   align-items: center;
   position: relative;
   animation: nested-circles__rotation 1s linear infinite;
+  box-sizing: border-box;
 }
 
 .nested-circles__inner-circle {

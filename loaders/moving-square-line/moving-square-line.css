@@ -1,5 +1,6 @@
 :root {
-  --moving-square-line__static-square-side: 100px;
+  --moving-square-line__size: 100px;
+  --moving-square-line__color: black;
   --moving-square-line__moving-square-side: 120px;
   --moving-square-line__moving-border-width: 30px;
 
@@ -8,7 +9,7 @@
       var(--moving-square-line__moving-square-side)
   );
   --moving-square-line__translate: calc(
-    var(--moving-square-line__static-square-side) - 2 *
+    var(--moving-square-line__size) - 2 *
       var(--moving-square-line__moving-border-width) +
       var(--moving-square-line__moving-square-side)
   );
@@ -20,11 +21,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: blue;
 }
 
 .moving-square-line__base-square {
-  height: var(--moving-square-line__static-square-side);
-  width: var(--moving-square-line__static-square-side);
+  height: var(--moving-square-line__size);
+  width: var(--moving-square-line__size);
   position: relative;
   overflow: hidden;
 }
@@ -54,7 +56,7 @@
   position: absolute;
   top: var(--moving-square-line__moving-square-offest);
   left: var(--moving-square-line__moving-square-offest);
-  background-color: black;
+  background-color: var(--moving-square-line__color);
   height: var(--moving-square-line__moving-square-side);
   width: var(--moving-square-line__moving-square-side);
   animation: moving-square-line__motion var(--moving-square-line__duration)
