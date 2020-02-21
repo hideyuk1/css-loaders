@@ -1,5 +1,6 @@
 :root {
   --debug-size-color: lightgray;
+  --debug-size-color: transparent;
 }
 
 #app {
