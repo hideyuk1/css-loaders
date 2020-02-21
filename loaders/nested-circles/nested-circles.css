@@ -20,6 +20,10 @@
   }
 }
 
+.nested-circles {
+  overflow: hidden;
+}
+
 .nested-circles__base-circle {
   height: var(--nested-circles__diameter);
   width: var(--nested-circles__diameter);
