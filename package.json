@@ -1,26 +1,26 @@
 {
-  "name": "static",
+  "name": "css-loaders",
   "version": "1.0.0",
-  "description": "This is a static template with no bundling",
+  "description": "Pure css loaders samples",
   "main": "index.html",
   "scripts": {
     "start": "serve"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/codesandbox-app/static-template.git"
+    "url": "git@github.com:hideyuk1/css-loaders.git"
   },
   "keywords": [
     "template",
     "codesandbox",
     "static"
   ],
-  "author": "Ives van Hoorne",
+  "author": "Lucas China",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/codesandbox-app/static-template/issues"
+    "url": "https://github.com/hideyuk1/css-loaders/issues"
   },
-  "homepage": "https://github.com/codesandbox-app/static-template#readme",
+  "homepage": "https://github.com/hideyuk1/css-loaders",
   "devDependencies": {
     "serve": "^11.2.0"
   }
