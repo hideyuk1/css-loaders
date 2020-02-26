@@ -18,6 +18,7 @@ const loaders = [
   "moving-square-line",
   "nested-circles",
   "circular-bars"
+  //"circular-trails"
 ];
 
 const loadersPaths = loaders.map(

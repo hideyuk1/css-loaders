@@ -1,0 +1,42 @@
+:root {
+  /* general vars */
+  --circular-trails__size: 100px;
+  --circular-trails__color: black;
+
+  /* animation variables */
+  --circular-trails__translateX-timing-function: cubic-bezier(0, 1, 1, 0);
+  --circular-trails__opacity-timing-function: ease-in-out;
+  --circular-trails__duration: 2s;
+}
+
+.circular-trails {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--debug-size-color);
+  width: var(--circular-trails__size);
+  height: var(--circular-trails__size);
+  position: relative;
+  box-sizing: border-box;
+}
+
+.circular-trails__circle {
+  height: 40px;
+  width: 40px;
+  box-sizing: border-box;
+  border: 1px black solid;
+  border-radius: 40px;
+  position: absolute;
+}
+
+.circular-trails__circle--1 {
+  transform: rotate(-30deg) translateX(23px) rotate(30deg);
+}
+
+.circular-trails__circle--2 {
+  transform: rotate(90deg) translateX(23px) rotate(-90deg);
+}
+
+.circular-trails__circle--3 {
+  transform: rotate(210deg) translateX(23px) rotate(-210deg);
+}

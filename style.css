@@ -1,12 +1,44 @@
 :root {
-  --debug-size-color: lightgray;
+  /* --debug-size-color: lightgray; */
+
   --debug-size-color: transparent;
+  --number-of-columns: 1;
+}
+
+@media only screen and (min-width: 768px) {
+  :root {
+    --number-of-columns: 2;
+  }
+}
+
+h1 {
+  text-align: center;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
 }
 
 #app {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
+  justify-items: center;
   align-items: center;
-  height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(var(--number-of-columns), 1fr);
+  grid-gap: 10px;
+  min-height: 100vh;
+}
+
+span.origin-debug {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform: scale(0.001);
+  transform-origin: inherit;
+}
+
+span.origin-debug::after {
+  content: "";
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  background: rgba(255, 128, 128, 0.75);
+  transform: scale(1000);
 }
