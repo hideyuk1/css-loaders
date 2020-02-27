@@ -6,7 +6,6 @@ const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const publicPath = "/";
 
 module.exports = {
-    mode: "development",
     entry: "./src/index.js",
     output: {
         filename: "main.bundle.js",
@@ -35,16 +34,6 @@ module.exports = {
                 ]
             }
         ]
-    },
-    devtool: "inline-source-map",
-
-    devServer: {
-        index: "index.html",
-        contentBase: path.join(__dirname, "dist"),
-        compress: true,
-        hot: true, //Hot module replacement
-        writeToDisk: true,
-        open: "chrome" //open in chrome
     },
     plugins: [
         new CleanWebpackPlugin(),
