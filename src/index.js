@@ -1,4 +1,4 @@
-import { circularBars, threeDots, movingSquareLine, nestedCircles } from "./loaders";
+import { circularBars, threeDots, movingSquareLine, nestedCircles, squareGrid } from "./loaders";
 import './style.css';
 
 function loadHtml(html) {
@@ -8,7 +8,11 @@ function loadHtml(html) {
 }
 
 const loaders = [
-  circularBars, threeDots, movingSquareLine, nestedCircles
+  circularBars, 
+  threeDots, 
+  movingSquareLine, 
+  nestedCircles,
+  squareGrid
 ];
 
 for (const path of loaders) {

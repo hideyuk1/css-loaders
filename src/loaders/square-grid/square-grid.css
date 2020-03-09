@@ -1,0 +1,60 @@
+:root {
+    --square-grid__size: 99px;
+}
+
+.square-grid {
+    overflow: hidden;
+    height: var(--square-grid__size);
+    width: var(--square-grid__size);
+    background-color: var(--debug-size-color);
+    justify-content: center;
+    align-items: center;
+}
+
+.square-grid__grid {
+    display: grid;
+    grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+    grid-gap: 0px;
+    height: 100%;
+}
+
+@keyframes square-grid__shrink {
+    0% {
+        transform: scale(1);
+    }
+    25% {
+        transform: scale(0);
+    }
+    50% {
+        transform: scale(1);
+    }
+}
+
+.square-grid__grid > div {
+    background-color: black;
+    animation: square-grid__shrink 2s infinite ease-in-out;
+}
+
+.square-grid__grid > div:nth-child(7) {
+    animation-delay: 0s;
+}
+
+.square-grid__grid > div:nth-child(4),
+.square-grid__grid > div:nth-child(8) {
+    animation-delay: 0.1s;
+}
+
+.square-grid__grid > div:nth-child(1),
+.square-grid__grid > div:nth-child(5),
+.square-grid__grid > div:nth-child(9) {
+    animation-delay: 0.2s;
+}
+
+.square-grid__grid > div:nth-child(2),
+.square-grid__grid > div:nth-child(6) {
+    animation-delay: 0.3s;
+}
+
+.square-grid__grid > div:nth-child(3) {
+    animation-delay: 0.4s;
+}
